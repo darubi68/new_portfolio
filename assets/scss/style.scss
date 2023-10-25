@@ -1,0 +1,245 @@
+@import 'font.scss';
+@import 'mixin.scss';
+@import 'variables.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: $en, $kr, sans-serif;
+}
+
+body {
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	color: $main-color;
+	&.before-load, 
+	&.open-nav {
+        overflow: hidden;
+    }
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: $main-color;
+}
+
+img {
+	object-fit: cover;
+}
+
+h1,
+h2 {
+	text-transform: capitalize;
+}
+
+.before-load {
+    .loading {
+        opacity: 1;
+    }
+}
+
+.loading {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 100;
+    background-color: #fff;
+    transition:0.5s;
+    opacity:0;
+    @include flexcenter;
+}
+
+.loading-circle {
+    width:56px;
+    height:56px;
+    animation: loadingSpin 3s infinite;
+    circle {
+        fill: transparent;
+        stroke: $main-color;
+        stroke-width: 6;
+        stroke-dasharray: 157;
+        stroke-dashoffset: 0;
+        animation: loadingAnimation 1s infinite;
+    }
+}
+
+@keyframes loadingSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingAnimation{
+    0% {
+        stroke-dashoffset: 157;
+    }
+    75% {
+        stroke-dashoffset: -117;
+    }
+    100% {
+        stroke-dashoffset: -157;
+    }
+}
+
+header {
+    width:100%;
+    height:50px;
+    padding:0 1rem;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: rgba(255,255,255,0.1);
+	backdrop-filter: saturate(180%) blur(15px);
+    @include flexbetween;
+}
+
+.nav-btn {
+	display: block;
+	width: 24px;
+}
+.nav-btn span {
+	position: relative;
+	display: block;
+}
+.nav-btn span,
+.nav-btn span:after,
+.nav-btn span:before {
+	width: 100%;
+	height: 4px;
+	background-color: $main-color;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+	border-radius: 2px;
+}
+.nav-btn span:after,
+.nav-btn span:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -7px;
+}
+.nav-btn span:after {
+	top: 7px;
+}
+
+.top-nav {
+	height: 100vh;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.3s;
+	text-align:center;
+
+	* {
+		opacity: 0;
+		transition: 0.3s;
+	}
+
+	&>:first-child {
+		height:50px;
+		padding: $lr-padding;
+		@include flexend;
+		.nav-btn span {
+			background-color: transparent;
+		}
+		.nav-btn span:before {
+			background-color: $light-color;
+			transform: rotate(45deg) translate(6px, 6px);
+		}
+		.nav-btn span:after {
+			background-color: $light-color;
+			transform: rotate(-45deg) translate(4px, -4px);
+		}
+	}
+
+	.top-nav-links {
+		height:calc(100vh - 100px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		a {
+			color: $light-color;
+			font-size: 2.2rem;
+			text-transform:capitalize;
+		}
+	}
+}
+
+.open-nav .top-nav {
+	width:100%;
+	* {
+		opacity: 1;
+	}
+}
+
+main {
+    width:100%;
+    height:100vh;
+    @include flexcenter;
+}
+
+section {
+	padding: $lr-padding;
+	width:100%;
+	margin-bottom: 8rem;
+}
+
+#about {
+	.about-main-img {
+		width:100%;
+		border-radius:10px;
+		margin-bottom:$s-margin;
+	}
+}
+
+#portfolio {
+	.portfolio-card {
+		margin-bottom:$l-margin;
+		h4 {
+			line-height: 2rem;
+		}
+		h5 {
+			color:$sub-color;
+			font-weight: 500;
+		}
+		.card-img-box {
+			width:100%;
+			display: flex;
+			gap: 15px;
+			overflow-x: scroll;
+			padding:1rem 0;
+			img {
+				border-radius: 10px;
+				border:1px solid $bright-color;
+			}
+		}
+		&.one-imgBox .card-img-box {
+			height:50vh;
+		}
+		&.two-imgBox .card-img-box {
+			height:30vh;
+		}
+		p:first-of-type {
+			margin-top:$s-margin;
+		}
+	}
+}
