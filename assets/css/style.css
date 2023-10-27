@@ -59,8 +59,8 @@ h2 {
   right: 0;
   z-index: 100;
   background-color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,6 +265,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
 section {
