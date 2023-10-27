@@ -267,6 +267,9 @@ main {
           align-items: center;
   -webkit-transition: height 0.3s;
   transition: height 0.3s;
+  background-image: url("../img/back.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
 section {

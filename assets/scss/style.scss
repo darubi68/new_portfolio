@@ -196,6 +196,9 @@ main {
 	height:100dvh;
     @include flexcenter;
 	transition: height $tst-duration;
+	background-image: url('../img/back.jpg');
+	background-position: center center;
+	background-size: cover;
 }
 
 section {
