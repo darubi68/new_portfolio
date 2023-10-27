@@ -182,7 +182,7 @@ header {
 
 .top-nav {
   width: 0;
-  height: 100svh;
+  height: 100dvh;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -265,11 +265,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: height 0.3s;
-  transition: height 0.3s;
-  background-image: url("../img/back.jpg");
-  background-position: center center;
-  background-size: cover;
 }
 
 section {
