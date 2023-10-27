@@ -295,7 +295,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 1rem 0;
 }
 #portfolio .portfolio-card .card-img-box img {
