@@ -279,11 +279,22 @@ section {
   margin-bottom: 1rem;
 }
 
+#career .career-card {
+  margin-bottom: 2rem;
+}
+#career .career-card h3 {
+  padding: 0.2rem 0;
+}
+#career .career-card h3 span {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
 #portfolio .portfolio-card {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 #portfolio .portfolio-card h4 {
-  line-height: 2rem;
+  padding: 0.2rem 0;
 }
 #portfolio .portfolio-card h5 {
   color: #7E8299;
