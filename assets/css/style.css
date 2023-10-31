@@ -266,6 +266,21 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
+main > div {
+  width: 100%;
+  height: calc(100% - 100px);
+  max-height: 1080px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 section {
   padding: 0 1rem;
