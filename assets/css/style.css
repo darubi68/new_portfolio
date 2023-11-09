@@ -331,6 +331,7 @@ section > h1:first-child {
 }
 #about .about-main-img {
   width: 100%;
+  max-width: 400px;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
