@@ -19,7 +19,7 @@ body {
 	font-style: normal;
 	font-size: 16px;
 	background-color: $dark-color;
-	color: $light-color;
+	color: $bright-color;
 	&.before-load, 
 	&.open-nav {
         overflow: hidden;
@@ -37,7 +37,7 @@ a:visited,
 a:hover,
 a:active {
 	text-decoration: none;
-	color: $light-color;
+	color: $bright-color;
 }
 
 img {
@@ -50,8 +50,8 @@ h2 {
 }
 
 h1 {
-	font-size: 3.3rem;
-	line-height: 3.3rem;
+	font-size: 3rem;
+	line-height: 3.2rem;
 }
 h2 {
 	font-size: 1.6rem;
@@ -92,7 +92,7 @@ h5 {
     animation: loadingSpin 3s infinite;
     circle {
         fill: transparent;
-        stroke: $green;
+        stroke: $violet;
         stroke-width: 6;
         stroke-dasharray: 157;
         stroke-dashoffset: 0;
@@ -125,7 +125,7 @@ header {
     position:fixed;
     top:0;
     left:0;
-    background-color: rgba(47,54,64,0.1);
+    background-color: rgba(26,32,38,0.1);
 	backdrop-filter: saturate(180%) blur(15px);
 	z-index: 10;
     @include flexbetween;
@@ -147,7 +147,7 @@ header {
 .nav-btn span:before {
 	width: 100%;
 	height: 3px;
-	background-color: $light-color;
+	background-color: $bright-color;
 	transition: all $tst-duration;
 	backface-visibility: hidden;
 	border-radius: 3px;
@@ -170,7 +170,7 @@ header {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: $black-color;
+	background-color: $dark-color;
 	overflow-x: hidden;
 	transition: $tst-duration;
 	text-align:center;
@@ -188,11 +188,11 @@ header {
 			background-color: transparent;
 		}
 		.nav-btn span:before {
-			background-color:$light-color;
+			background-color:$bright-color;
 			transform: rotate(45deg) translate(6px, 6px);
 		}
 		.nav-btn span:after {
-			background-color: $light-color;
+			background-color: $bright-color;
 			transform: rotate(-45deg) translate(4px, -4px);
 		}
 	}
@@ -204,7 +204,7 @@ header {
 		align-items: center;
 		justify-content: space-evenly;
 		a {
-			color: $light-color;
+			color: $bright-color;
 			font-size: 2.2rem;
 			text-transform:capitalize;
 		}
@@ -221,6 +221,7 @@ header {
 main {
     width:100%;
 	height:100svh;
+	background-color: $black-color;
     @include flexcenter;
 	overflow: hidden;
 	>div {
@@ -250,7 +251,7 @@ section {
 	}
 	.about-main-img {
 		width:100%;
-		max-width:400px;
+		max-width:600px;
 		border-radius:10px;
 		margin-bottom:$s-margin;
 	}
@@ -335,7 +336,7 @@ section {
 		}
 	}
 	>:nth-child(2) .keyword{
-		background-image: linear-gradient($dark-color, $dark-color), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		background-image: linear-gradient($black-color, $black-color), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		small {
 			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 			-webkit-background-clip: text;
@@ -343,7 +344,7 @@ section {
 		}
 	}
 	>:nth-child(3) .keyword{
-		background-image: linear-gradient($dark-color, $dark-color), linear-gradient(180deg, #2af598 0%, #009efd 100%);
+		background-image: linear-gradient($black-color, $black-color), linear-gradient(180deg, #2af598 0%, #009efd 100%);
 		small {
 			background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
 			-webkit-background-clip: text;

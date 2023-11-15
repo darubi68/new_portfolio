@@ -20,7 +20,6 @@ function portfolioScroll () {
 
     const scrollRatio = ((window.pageYOffset - normalSceneHeight)-(scrollSceneHeight - window.innerHeight)) / (scrollSceneHeight - window.innerHeight);
 
-
     if(window.pageYOffset < normalSceneHeight) {
         sceneBackground.style.transform = 'translate3d(0, -100%, 0)';
         sceneBackground.style.opacity = 0;

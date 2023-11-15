@@ -21,8 +21,8 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  background-color: #2f3640;
-  color: #dfe4ea;
+  background-color: #292e38;
+  color: #dcdde1;
 }
 body.before-load, body.open-nav {
   overflow: hidden;
@@ -39,7 +39,7 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #dfe4ea;
+  color: #dcdde1;
 }
 
 img {
@@ -53,8 +53,8 @@ h2 {
 }
 
 h1 {
-  font-size: 3.3rem;
-  line-height: 3.3rem;
+  font-size: 3rem;
+  line-height: 3.2rem;
 }
 
 h2 {
@@ -85,7 +85,7 @@ h5 {
   bottom: 0;
   right: 0;
   z-index: 100;
-  background-color: #2f3640;
+  background-color: #292e38;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
@@ -108,7 +108,7 @@ h5 {
 }
 .loading-circle circle {
   fill: transparent;
-  stroke: #1bc5bd;
+  stroke: #8950FC;
   stroke-width: 6;
   stroke-dasharray: 157;
   stroke-dashoffset: 0;
@@ -158,7 +158,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(47, 54, 64, 0.1);
+  background-color: rgba(26, 32, 38, 0.1);
   -webkit-backdrop-filter: saturate(180%) blur(15px);
           backdrop-filter: saturate(180%) blur(15px);
   z-index: 10;
@@ -191,7 +191,7 @@ header h3 {
 .nav-btn span:before {
   width: 100%;
   height: 3px;
-  background-color: #dfe4ea;
+  background-color: #dcdde1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-backface-visibility: hidden;
@@ -218,7 +218,7 @@ header h3 {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #1e272e;
+  background-color: #292e38;
   overflow-x: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -246,12 +246,12 @@ header h3 {
   background-color: transparent;
 }
 .top-nav > :first-child .nav-btn span:before {
-  background-color: #dfe4ea;
+  background-color: #dcdde1;
   -webkit-transform: rotate(45deg) translate(6px, 6px);
           transform: rotate(45deg) translate(6px, 6px);
 }
 .top-nav > :first-child .nav-btn span:after {
-  background-color: #dfe4ea;
+  background-color: #dcdde1;
   -webkit-transform: rotate(-45deg) translate(4px, -4px);
           transform: rotate(-45deg) translate(4px, -4px);
 }
@@ -272,7 +272,7 @@ header h3 {
           justify-content: space-evenly;
 }
 .top-nav .top-nav-links a {
-  color: #dfe4ea;
+  color: #dcdde1;
   font-size: 2.2rem;
   text-transform: capitalize;
 }
@@ -287,6 +287,7 @@ header h3 {
 main {
   width: 100%;
   height: 100svh;
+  background-color: #1a2026;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,13 +332,13 @@ section > h1:first-child {
 }
 #about .about-main-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
 #career {
-  background-color: #1e272e;
+  background-color: #1a2026;
 }
 #career .career-card {
   margin-bottom: 2rem;
@@ -350,7 +351,7 @@ section > h1:first-child {
   font-size: 1rem;
 }
 #career .career-card p {
-  color: #a4b0be;
+  color: #7b828e;
 }
 #career > :last-child {
   margin-bottom: 0;
@@ -367,7 +368,7 @@ section > h1:first-child {
   padding: 0.2rem 0;
 }
 #portfolio .portfolio-card h5 {
-  color: #a4b0be;
+  color: #7b828e;
   font-weight: 500;
   margin-bottom: 0.6rem;
 }
@@ -434,7 +435,7 @@ section > h1:first-child {
   display: inline-flex;
 }
 #portfolio > :nth-child(2) .keyword {
-  background-image: linear-gradient(#2f3640, #2f3640), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 #portfolio > :nth-child(2) .keyword small {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -442,8 +443,8 @@ section > h1:first-child {
   -webkit-text-fill-color: transparent;
 }
 #portfolio > :nth-child(3) .keyword {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f3640), to(#2f3640)), -webkit-gradient(linear, left top, left bottom, from(#2af598), to(#009efd));
-  background-image: linear-gradient(#2f3640, #2f3640), linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a2026), to(#1a2026)), -webkit-gradient(linear, left top, left bottom, from(#2af598), to(#009efd));
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(180deg, #2af598 0%, #009efd 100%);
 }
 #portfolio > :nth-child(3) .keyword small {
   background: -webkit-gradient(linear, left top, left bottom, from(#2af598), to(#009efd));
@@ -452,8 +453,8 @@ section > h1:first-child {
   -webkit-text-fill-color: transparent;
 }
 #portfolio > :nth-child(4) .keyword {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e272e), to(#1e272e)), -webkit-gradient(linear, left top, right top, from(#b8cbb8), color-stop(0%, #b8cbb8), color-stop(0%, #b465da), color-stop(33%, #cf6cc9), color-stop(66%, #ee609c), to(#ee609c));
-  background-image: linear-gradient(#1e272e, #1e272e), linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a2026), to(#1a2026)), -webkit-gradient(linear, left top, right top, from(#b8cbb8), color-stop(0%, #b8cbb8), color-stop(0%, #b465da), color-stop(33%, #cf6cc9), color-stop(66%, #ee609c), to(#ee609c));
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 }
 #portfolio > :nth-child(4) .keyword small {
   background: -webkit-gradient(linear, left top, right top, from(#b8cbb8), color-stop(0%, #b8cbb8), color-stop(0%, #b465da), color-stop(33%, #cf6cc9), color-stop(66%, #ee609c), to(#ee609c));
@@ -462,8 +463,8 @@ section > h1:first-child {
   -webkit-text-fill-color: transparent;
 }
 #portfolio > :nth-child(5) .keyword {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e272e), to(#1e272e)), -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
-  background-image: linear-gradient(#1e272e, #1e272e), linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a2026), to(#1a2026)), -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 }
 #portfolio > :nth-child(5) .keyword small {
   background: -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
@@ -472,8 +473,8 @@ section > h1:first-child {
   -webkit-text-fill-color: transparent;
 }
 #portfolio > :nth-child(6) .keyword {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e272e), to(#1e272e)), -webkit-gradient(linear, left bottom, left top, from(#ff0844), to(#ffb199));
-  background-image: linear-gradient(#1e272e, #1e272e), linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a2026), to(#1a2026)), -webkit-gradient(linear, left bottom, left top, from(#ff0844), to(#ffb199));
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
 #portfolio > :nth-child(6) .keyword small {
   background: -webkit-gradient(linear, left bottom, left top, from(#ff0844), to(#ffb199));
@@ -482,8 +483,8 @@ section > h1:first-child {
   -webkit-text-fill-color: transparent;
 }
 #portfolio > :nth-child(7) .keyword {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e272e), to(#1e272e)), -webkit-gradient(linear, left bottom, left top, from(#48c6ef), to(#6f86d6));
-  background-image: linear-gradient(#1e272e, #1e272e), linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a2026), to(#1a2026)), -webkit-gradient(linear, left bottom, left top, from(#48c6ef), to(#6f86d6));
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
 }
 #portfolio > :nth-child(7) .keyword small {
   background: -webkit-gradient(linear, left bottom, left top, from(#48c6ef), to(#6f86d6));
@@ -492,8 +493,8 @@ section > h1:first-child {
   -webkit-text-fill-color: transparent;
 }
 #portfolio > :nth-child(8) .keyword {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e272e), to(#1e272e)), -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
-  background-image: linear-gradient(#1e272e, #1e272e), linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a2026), to(#1a2026)), -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
+  background-image: linear-gradient(#1a2026, #1a2026), linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 }
 #portfolio > :nth-child(8) .keyword small {
   background: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
@@ -509,7 +510,7 @@ section > h1:first-child {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #1e272e;
+  background-color: #1a2026;
   left: 0;
   bottom: 0;
   z-index: -10;
