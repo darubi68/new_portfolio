@@ -379,7 +379,7 @@ section {
 .modal-container {
 	width:calc(100% - 2rem);
 	height:100%;
-	max-height:calc(100vh - 4rem);
+	max-height:calc(100svh - 4rem);
 	background-color: $back-color;
 	border:1px solid $textSub-color;
 	border-radius: 2rem;
