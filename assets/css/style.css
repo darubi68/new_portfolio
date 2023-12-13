@@ -554,7 +554,7 @@ section > h1:first-child {
 .modal-container {
   width: calc(100% - 2rem);
   height: 100%;
-  max-height: calc(100svh - 4rem);
+  max-height: calc(100vh - 4rem);
   background-color: #1d1c20;
   border: 1px solid #8c8c8c;
   border-radius: 2rem;
