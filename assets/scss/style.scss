@@ -147,7 +147,7 @@ nav {
 	a {
 		text-transform:uppercase;
 		font-weight: 200;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 	}
 }
 
@@ -219,6 +219,9 @@ section {
 	background-color: $backDark-color;
 	.job-card {
 		margin-bottom:$m-margin;
+		small {
+			color: $violet;
+		}
 		h4 {
 			padding:0.4rem 0;
 			span {
@@ -235,9 +238,9 @@ section {
 	}
 }
 
-#portfolio {
+#work {
 	position:relative;
-	.portfolio-card {
+	.work-card {
 		width:100%;
 		margin-bottom:$l-margin;
 		h4 {
@@ -355,7 +358,7 @@ section {
 	}
 }
 
-.portfolio-background {
+.work-background {
 	width:100%;
 	height:100%;
 	position:absolute;
@@ -368,7 +371,7 @@ section {
 	transform: translate3d(0, 100%, 0);
 }
 
-.portfolio-background.scroll-on {
+.work-background.scroll-on {
 	position:fixed;
 	transition: transform $tst-duration;
 }

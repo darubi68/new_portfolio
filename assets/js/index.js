@@ -25,9 +25,9 @@ function navOpen () {
       prevScrollpos = currentScrollPos;
 }
 
-function portfolioScroll () {
-    const sceneBackground = document.querySelector('.portfolio-background');
-    const scrollSceneHeight = document.getElementById('portfolio').scrollHeight;
+function workScroll () {
+    const sceneBackground = document.querySelector('.work-background');
+    const scrollSceneHeight = document.getElementById('work').scrollHeight;
     const normalScene = document.querySelectorAll('.normal-scene');
     let normalSceneHeight = 0;
 
@@ -62,7 +62,7 @@ window.addEventListener('load', () => {
 
 window.addEventListener('scroll', () => {
     navOpen();
-    portfolioScroll();
+    workScroll();
 });
 
 window.addEventListener('orientationchange', ()=> {
