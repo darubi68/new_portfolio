@@ -1,27 +1,26 @@
 
+
+//부드러운 모달 on/off
 document.getElementById('modal-close').addEventListener('click', ()=>{
     document.body.classList.remove('not-scroll');
-    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modal').classList.remove('modal-show');
+    document.getElementById('modal').classList.add('modal-hide');  
 })
-
 document.querySelectorAll('.work-card').forEach((e)=>{
     e.addEventListener('click', ()=>{
         document.body.classList.add('not-scroll');
-        console.log(e.id);
-        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('modal').classList.add('modal-show');
+        document.getElementById('modal').classList.remove('modal-hide');
     })
 })
 
 let prevScrollpos = window.pageYOffset;
-
 function navOpen () {
     const currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        // 스크롤 올릴때
         document.getElementById("top-nav").style.top = "0px";
         document.getElementsByTagName("header")[0].style.top = "-50px";
       } else {
-        // 스크롤 내릴때
         document.getElementById("top-nav").style.top = "-50px";
         document.getElementsByTagName("header")[0].style.top = "0px";
       }
@@ -55,17 +54,32 @@ function workScroll () {
     }
 }
 
+// a태그 대신 jqvascript로 페이지 내 이동
+document.querySelectorAll('#top-nav ul li').forEach(e => {
+    e.addEventListener('click', (el) => {
+        const elName = el.target.innerHTML;
+        document.getElementById(elName).scrollIntoView({behavior : 'smooth'});
+    })
+})
+
 document.querySelector('.loading').addEventListener('transitionend', (e) => {
+    // 로딩 트랜지션이 끝난 후 자연스럽게 사라지도록
     document.body.removeChild(e.target);
 });
 
 window.addEventListener('load', () => {
+    // 로드 완료
     document.body.classList.remove('before-load');
-    document.getElementById('modal').style.display = 'none';
+
+    // 모달 띄워진 상태에서 새로고침 되었을 경우 대비
+    document.getElementById('modal').classList.remove('modal-show');
 });
 
 window.addEventListener('scroll', () => {
+    // 스크롤에 따른 네브 구현
     navOpen();
+
+    // work section 배경컬러 효과 이벤트 
     workScroll();
 });
 
