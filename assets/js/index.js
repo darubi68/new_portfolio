@@ -1,13 +1,16 @@
 
-// document.querySelectorAll('.nav-btn').forEach((e)=>{
-//     e.addEventListener('click', ()=>{
-//         if(e.id === 'openNav') {
-//             document.body.classList.add('open-nav');
-//         } else {
-//             document.body.classList.remove('open-nav');
-//         }
-//     })
-// })
+document.getElementById('modal-close').addEventListener('click', ()=>{
+    document.body.classList.remove('not-scroll');
+    document.getElementById('modal').style.display = 'none';
+})
+
+document.querySelectorAll('.work-card').forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        document.body.classList.add('not-scroll');
+        console.log(e.id);
+        document.getElementById('modal').style.display = 'flex';
+    })
+})
 
 let prevScrollpos = window.pageYOffset;
 
@@ -58,6 +61,7 @@ document.querySelector('.loading').addEventListener('transitionend', (e) => {
 
 window.addEventListener('load', () => {
     document.body.classList.remove('before-load');
+    document.getElementById('modal').style.display = 'none';
 });
 
 window.addEventListener('scroll', () => {
