@@ -1,12 +1,29 @@
-// function setMainSVG () {
-//     if(window.innerWidth > window.innerHeight - 100) {
-//         document.querySelector('.main-svg').style.width = 'auto';
-//         document.querySelector('.main-svg').style.height = '100%';
-//     } else {
-//         document.querySelector('.main-svg').style.width = '100%';
-//         document.querySelector('.main-svg').style.height = 'auto'; 
-//     }
-// }
+
+// document.querySelectorAll('.nav-btn').forEach((e)=>{
+//     e.addEventListener('click', ()=>{
+//         if(e.id === 'openNav') {
+//             document.body.classList.add('open-nav');
+//         } else {
+//             document.body.classList.remove('open-nav');
+//         }
+//     })
+// })
+
+let prevScrollpos = window.pageYOffset;
+
+function navOpen () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        // 스크롤 올릴때
+        document.getElementById("top-nav").style.top = "0px";
+        document.getElementsByTagName("header")[0].style.top = "-50px";
+      } else {
+        // 스크롤 내릴때
+        document.getElementById("top-nav").style.top = "-50px";
+        document.getElementsByTagName("header")[0].style.top = "0px";
+      }
+      prevScrollpos = currentScrollPos;
+}
 
 function portfolioScroll () {
     const sceneBackground = document.querySelector('.portfolio-background');
@@ -35,35 +52,23 @@ function portfolioScroll () {
     }
 }
 
-document.querySelectorAll('.nav-btn').forEach((e)=>{
-    e.addEventListener('click', ()=>{
-        if(e.id === 'openNav') {
-            document.body.classList.add('open-nav');
-        } else {
-            document.body.classList.remove('open-nav');
-        }
-    })
-})
-
 document.querySelector('.loading').addEventListener('transitionend', (e) => {
     document.body.removeChild(e.target);
 });
 
 window.addEventListener('load', () => {
-    // setMainSVG();
     document.body.classList.remove('before-load');
 });
 
 window.addEventListener('scroll', () => {
+    navOpen();
     portfolioScroll();
 });
 
 window.addEventListener('orientationchange', ()=> {
-
 });
 
 window.addEventListener('resize', () => {
-    // setMainSVG();
 });
 
 
