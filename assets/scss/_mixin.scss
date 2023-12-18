@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @mixin flexcenter {
     display: flex;
     justify-content: center;
@@ -17,13 +19,15 @@
 }
 
 @mixin buttonStyle {
-    padding:0.7rem 3rem;
+    padding: 0.7rem 3rem;
     position: relative;
-    margin-top:$m-margin;
+    margin-top: $m-margin;
     font-size: 0.9rem;
     transition: all $tst-duration;
     text-transform: uppercase;
-    &::before, &::after {
+
+    &::before,
+    &::after {
         content: '';
         position: absolute;
         transition: all $tst-duration;
@@ -33,21 +37,46 @@
         height: 100%;
         z-index: 1;
     }
+
     &::before {
         opacity: 0;
         background: rgba(255, 255, 255, 0.1);
         transform: scale(1, 0.1);
-      }
+    }
+
     &:hover::before {
         opacity: 1;
         transform: scale(1, 1);
     }
+
     &::after {
         transition: all 0.3s;
         border: 1px solid rgba(255, 255, 255, 0.5);
     }
+
     &:hover::after {
         transform: scale(1, .1);
         opacity: 0;
     }
 }
+
+// /*반응형, 브라우저 크기가 767px 이하일때*/
+// @mixin mobile {
+//     @media (max-width: $mobile) {
+//         @content;
+//     }
+// }
+
+// /*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+// @mixin tablet {
+//     @media (min-width: $mobile+1) and (max-width: $tablet) {
+//         @content;
+//     }
+// }
+
+// /*반응형, 브라우저 크기가 1024px 이상일때*/
+// @mixin desktop {
+//     @media (min-width: $desktop) {
+//         @content;
+//     }
+// }

@@ -55,21 +55,21 @@ h2 {
 }
 
 h1 {
-	font-size: 2.2rem;
-	line-height: 2.2rem;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
 }
 h2 {
-	font-size: 1.4rem;
-	line-height: 1.4rem;
+	font-size: 1.8rem;
+	line-height: 1.8rem;
 }
 h3 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 }
 h4 {
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 }
 h5 {
-	font-size: 0.9rem;
+	font-size: 1.1rem;
 }
 
 .en {
@@ -185,7 +185,6 @@ section {
 }
 
 #about {
-	// background-color: $backDark-color;
 	h1 span {
 		font-size: 1.6rem;
 		font-weight: 200;
@@ -195,10 +194,11 @@ section {
 		max-width:$max-width;
 		border-radius:10px;
 		margin-bottom:$m-margin;
-		height: 30rem;
+		max-height: 40rem;
 		object-position: top;
 	}
 	.about-text  {
+		margin-bottom:3rem;
 		p {
 			line-height: 1.6rem;
 			margin-bottom:$s-margin;
@@ -207,20 +207,36 @@ section {
 			margin-bottom:0;
 		}
 	}
-	.about-card {
+	&>:last-child {
+		margin-bottom:0;
+	}
+}
+
+#career {
+	background-color: $backDark-color;
+	.career-card {
 		margin-bottom:$m-margin;
-		small {
+		h3 {
 			color: $violet;
+			margin-bottom:0.8rem;
 		}
-		h4 {
-			padding:0.4rem 0;
-			span {
-				font-weight: lighter;
-				font-size: 1rem;
+		ul {
+			li {
+				margin-bottom:0.8rem;
+				h5 {
+					padding:0.2rem 0;
+					span {
+						font-weight: lighter;
+						font-size: 1rem;
+					}
+				}
+				p {
+					color: $textSub-color;
+				}
 			}
-		}
-		p {
-			color: $textSub-color;
+			& > li:last-child {
+				margin-bottom:0;
+			}
 		}
 	}
 	&>:last-child {
@@ -236,9 +252,9 @@ section {
 		margin-bottom:$l-margin;
 		cursor: pointer;
 		h4 {
-			padding:0.4rem 0;
+			padding:0.3rem 0;
 		}
-		h5 {
+		p {
 			color:$textSub-color;
 			font-weight: 500;
 			margin-bottom:$s-margin;
@@ -368,6 +384,25 @@ section {
 	transition: transform $tst-duration;
 }
 
+#contact {
+	h1 {
+		margin-bottom:0.5rem;
+		text-align: left;
+	}
+	h2 {
+		margin-bottom: $m-margin;
+		font-weight: 300;
+	}
+	.contact-card {
+		margin-bottom:$s-margin;
+		dt {
+			margin-bottom:0.3rem;
+			color: $textSub-color;
+		}
+	}
+}
+
+// 모달 css
 .not-scroll {
 	overflow: hidden;
 }
@@ -436,21 +471,21 @@ section {
 	display: none;
 }
 
-#contact {
-	h1 {
-		margin-bottom:0.5rem;
-		text-align: left;
-	}
-	h2 {
-		margin-bottom: $m-margin;
-		font-weight: 300;
-	}
-	.contact-card {
-		margin-bottom:$s-margin;
-		h5 {
-			margin-bottom:0.2rem;
-			font-weight: 200;
-			color: $textSub-color;
-		}
-	}
-}
+// @include mobile{ 
+// 	/*브라우저 사이즈767px이하일때*/
+// 	body {	
+// 		color: pink;
+// 	}
+// }
+// @include tablet{
+// 	/*브라우저 사이즈1023px이하일때*/
+// 	body {	
+// 		color: blue;
+// 	}
+// }
+// @include desktop{
+// 	/*브라우저 사이즈1024px이상일때*/
+// 	body {	
+// 		color: chartreuse;
+// 	}
+// }

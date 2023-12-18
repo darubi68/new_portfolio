@@ -2,32 +2,32 @@ $kr : 'Pretendard';
 $en : 'Montserrat';
 $icon : bootstrap-icons;
 
-$backDark-color : #0d0d0d;
-$back-color : #2e2e35;
+$backDark-color : #151618;
+$back-color : #25272c;
 
-$text-color : #f1f2f6;
-$textSub-color : #8f8f8f;
+$text-color : #fff;
+$textSub-color : #80848e;
 
 $deepBlue : #1261ff;
 $blue : #3699ff;
 $green : #1bc5bd;
-$violet : #8950FC;
+$violet : #702afb;
 $light-yellow : #fed428;
 $yellow : #ffa800;
 $red : #f64e60;
 
-// $deepBlue : #0073e9;
-// $blue : #0086FF;
-// $skyBlue : #3699ff;
-// $green : #0bb7af;
-// $violet : #702afb;
-// $yellow : #ee9d01;
-// $red : #f42a3f;
-
 $max-width: 1180px;
 $max-height: 1080px;
-$lr-padding : 0 1rem;
+$lr-padding: 0 1rem;
 $s-margin: 1rem;
 $m-margin: 2rem;
 $l-margin: 4rem;
 $tst-duration : 0.3s;
+
+/*반응형 화면 크기*/
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+
+
