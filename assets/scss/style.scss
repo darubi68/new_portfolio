@@ -160,7 +160,7 @@ header {
 }
 
 main {
-    width:100%;
+	width:100%;
 	height:100svh;
 	background-color: $backDark-color;
     @include flexcenter;
@@ -185,15 +185,18 @@ section {
 }
 
 #about {
+	// background-color: $backDark-color;
 	h1 span {
 		font-size: 1.6rem;
 		font-weight: 200;
 	}
-	.about-main-img {
+	.about-img {
 		width:100%;
 		max-width:$max-width;
 		border-radius:10px;
 		margin-bottom:$m-margin;
+		height: 30rem;
+		object-position: top;
 	}
 	.about-text  {
 		p {
@@ -204,11 +207,7 @@ section {
 			margin-bottom:0;
 		}
 	}
-}
-
-#job {
-	background-color: $backDark-color;
-	.job-card {
+	.about-card {
 		margin-bottom:$m-margin;
 		small {
 			color: $violet;

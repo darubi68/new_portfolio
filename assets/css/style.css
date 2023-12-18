@@ -59,8 +59,8 @@ body {
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
-  background-color: #1d1c20;
-  color: #f5f6fa;
+  background-color: #27272a;
+  color: #f1f2f6;
 }
 body.before-load, body.open-nav {
   overflow: hidden;
@@ -77,7 +77,7 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #f5f6fa;
+  color: #f1f2f6;
   display: inline-block;
 }
 
@@ -170,7 +170,7 @@ h5 {
   bottom: 0;
   right: 0;
   z-index: 100;
-  background-color: #1d1c20;
+  background-color: #27272a;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
@@ -331,11 +331,14 @@ section > h1:first-child {
   font-size: 1.6rem;
   font-weight: 200;
 }
-#about .about-main-img {
+#about .about-img {
   width: 100%;
   max-width: 1180px;
   border-radius: 10px;
   margin-bottom: 2rem;
+  height: 30rem;
+  -o-object-position: top;
+     object-position: top;
 }
 #about .about-text p {
   line-height: 1.6rem;
@@ -344,27 +347,23 @@ section > h1:first-child {
 #about .about-text > p:last-child {
   margin-bottom: 0;
 }
-
-#job {
-  background-color: #0d0d0d;
-}
-#job .job-card {
+#about .about-card {
   margin-bottom: 2rem;
 }
-#job .job-card small {
+#about .about-card small {
   color: #8950FC;
 }
-#job .job-card h4 {
+#about .about-card h4 {
   padding: 0.4rem 0;
 }
-#job .job-card h4 span {
+#about .about-card h4 span {
   font-weight: lighter;
   font-size: 1rem;
 }
-#job .job-card p {
-  color: #8c8c8c;
+#about .about-card p {
+  color: #8f8f8f;
 }
-#job > :last-child {
+#about > :last-child {
   margin-bottom: 0;
 }
 
@@ -381,7 +380,7 @@ section > h1:first-child {
   padding: 0.4rem 0;
 }
 #work .work-card h5 {
-  color: #8c8c8c;
+  color: #8f8f8f;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -595,8 +594,8 @@ section > h1:first-child {
   left: 50%;
   -webkit-transform: translate(-50%, -40%);
           transform: translate(-50%, -40%);
-  background-color: #1d1c20;
-  border: 1px solid #8c8c8c;
+  background-color: #27272a;
+  border: 1px solid #8f8f8f;
   border-radius: 1rem;
   padding: 1rem;
   opacity: 0;
@@ -634,5 +633,5 @@ section > h1:first-child {
 #contact .contact-card h5 {
   margin-bottom: 0.2rem;
   font-weight: 200;
-  color: #8c8c8c;
+  color: #8f8f8f;
 }
