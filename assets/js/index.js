@@ -19,9 +19,9 @@ function navOpen () {
     const currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("top-nav").style.top = "0px";
-        document.getElementsByTagName("header")[0].style.top = "-50px";
+document.getElementsByTagName("header")[0].style.top = "-50px";
       } else {
-        document.getElementById("top-nav").style.top = "-50px";
+document.getElementById("top-nav").style.top = "-50px";
         document.getElementsByTagName("header")[0].style.top = "0px";
       }
       prevScrollpos = currentScrollPos;
